@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+
+    <PackageId>Dapper.SqlBuilder</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>DotNet Brightener, tofi lagman</Authors>
+    <Company>Dapper.SqlBuilder</Company>
+    <PackageDescription>A small library that help you convert LinQ lambda expression into raw SQL queries with strongly type manner.</PackageDescription>
+    <RepositoryUrl>https://github.com/DavidViolet18/Dapper.SqlBuilder.git</RepositoryUrl>
+    <AssemblyName>Dapper.SqlBuilder</AssemblyName>
+		<RootNamespace>Dapper.SqlBuilder</RootNamespace>
+
+  </PropertyGroup>
+
+</Project>
