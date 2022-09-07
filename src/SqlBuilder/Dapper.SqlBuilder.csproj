@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
 
     <PackageId>Dadoudidou.Dapper.SqlBuilder</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>DotNet Brightener, tofi lagman</Authors>
     <Company>Dadoudidou.Dapper.SqlBuilder</Company>
     <PackageDescription>A small library that help you convert LinQ lambda expression into raw SQL queries with strongly type manner.</PackageDescription>

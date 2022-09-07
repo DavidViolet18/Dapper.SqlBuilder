@@ -258,6 +258,7 @@ namespace Dapper.SqlBuilder
             {
                 if(expressions.Count() < index) return;
                 var expression = expressions[index];
+                //Console.WriteLine(expression.Body.NodeType);
                 Resolver.ResolveQuery(expression);
                 /*var obj = Resolver.GetExpressionObject(expression.Body);
                 if(obj is MemberNode convMemberNode) Builder.QueryByField(convMemberNode.TableName, convMemberNode.FieldName);
@@ -285,6 +286,10 @@ namespace Dapper.SqlBuilder
                     ResolveExpression(position);
                 }
             });
+            if(startIndex < rawExpression.Length)
+            {
+                Builder.QueryByRaw(rawExpression.Substring(startIndex));
+            }
 
                             
             return this;

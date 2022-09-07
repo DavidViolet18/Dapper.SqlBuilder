@@ -179,6 +179,11 @@ public class SqlBuilderQueryTests : AbstractTests
         query = SqlBuilder.Select<User>().Where("@0 = @1 OR @0 = @2 OR @0 = @3 OR @0 = @4", x => x.Uuid, _ => id1, _ => id2, _ => 3, _ => "4");
         Assert.Equal("SELECT Users.* FROM Users WHERE Users.Uuid = @Param1 OR Users.Uuid = @Param2 OR Users.Uuid = @Param3 OR Users.Uuid = @Param4", query.CommandText);
         Assert.Equal(4, query.CommandParameters.Count);
+
+        var l = new string[] {"13"};
+        query = SqlBuilder.Select<User>().Where("BIN_TO_UUID(@0) IN @1", x => x.Uuid, _ => l);
+        Assert.Equal("SELECT Users.* FROM Users WHERE BIN_TO_UUID(Users.Uuid) IN @Param1", query.CommandText);
+        Assert.Equal(1, query.CommandParameters.Count);
     }
 
 }
